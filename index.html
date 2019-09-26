@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>bar mode app</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <a id="menu-toggle" class="btn btn-primary btn-lg toggle"> <i class="fa fa-bars" data-toggle="tooltip" title="Side ToolBox"></i></a>
+    <div id="sidebar-wrapper" data-toggle="tooltip" title="Close">
+        <a id="menu-close" href="#" class="btn btn-default btn-lg pull-right toggle"><i class="fa fa-times" style="color:red;"></i></a>
+<!--         <i class="fa fa-download"></i> --> 
+        <ul class="sidebar-nav">
+        <!-- <li style="color:white;font-size: 25px;">
+            Sticker:
+        </li> -->
+        <li>
+            <image id = "sweets" class = "sticker left" src = "./assets/images/sweets.png"  data-toggle="tooltip" title="Sticker"></image>
+            <image id = "cherrycake1" class = "sticker right" src = "./assets/images/cherry.png" data-toggle="tooltip" title="Sticker"></image>
+        </li>
+        <li>
+            <image id = "yellowCar" class = "sticker left" src = "./assets/images/yellow_car.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "blueCar" class = "sticker right" src = "./assets/images/blue_car.png" data-toggle="tooltip" title="Sticker"></image>
+
+        </li>
+        <li>
+            <image id = "cherrycake" class = "sticker left" src = "./assets/images/cherryCake.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "cupcake" class = "sticker right" src = "./assets/images/cupCake.png" data-toggle="tooltip" title="Sticker"></image>
+        </li>
+        <li>
+            <image id = "st_bigger" class = "sticker left" src = "./assets/images/st_bigger.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_smaller" class = "sticker right" src = "./assets/images/st_smaller.png" data-toggle="tooltip" title="Sticker"></image>
+        </li>
+        <li>
+            <image id = "st_biggerequal" class = "sticker left" src = "./assets/images/st_biggerequal.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_smallerequal" class = "sticker right" src = "./assets/images/st_smallerequal.png" data-toggle="tooltip" title="Sticker"></image>
+        </li>
+        <li>
+            <image id = "st_equal" class = "sticker left" src = "./assets/images/st_equal.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_notequal" class = "sticker right" src = "./assets/images/st_notequal.png" data-toggle="tooltip" title="Sticker"></image>
+        </li>
+        <li>
+            <!-- <image id = "questionmark" src = "./assets/images/question-mark.png"></image> -->
+            <image id = "redquestion" class = "sticker left" src = "./assets/images/red_question_mark.png" data-toggle="tooltip" title="Qestion Mark"></image>
+            <image id = "logoclrquestion" class = "sticker right" src = "./assets/images/logocolor_question_mark.png" data-toggle="tooltip" title="Qestion Mark"></image>
+        </li>
+        <li>
+            <!-- <image id = "questionmark" src = "./assets/images/question-mark.png"></image> -->
+            <image id = "fraction" src = "./assets/images/fraction.png" data-toggle="tooltip" title="Fraction"></image>
+            <image id = "question" class = "sticker right" style = "margin-left: 45px;" src = "./assets/images/grey_question_mark.png" data-toggle="tooltip" title="Qestion Mark"></image>
+        </li>
+        <li>
+            <image id = "st_one" class = "sticker left" src = "./assets/images/st_one.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_minusone" class = "sticker right" src = "./assets/images/st_minusone.png" data-toggle="tooltip" title="Sticker"></image>
+        </li>
+        <li>
+            <image id = "st_x" class = "sticker left" src = "./assets/images/st_x.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_-x" class = "sticker right" src = "./assets/images/st_-x.png" data-toggle="tooltip" title="Sticker"></image>
+        </li>
+        <li>
+            <image id = "st_y" class = "sticker left" src = "./assets/images/st_y.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_-y" class = "sticker right" src = "./assets/images/st_-y.png" data-toggle="tooltip" title="Sticker"></image>
+        </li>
+        <li>
+            <image id = "st_xpower" class = "sticker left" src = "./assets/images/st_xpower.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_-xpower" class = "sticker right" src = "./assets/images/st_-xpower.png" data-toggle="tooltip" title="Sticker"></image>
+        </li>
+        <li>
+            <image id = "st_ypower" class = "sticker left" src = "./assets/images/st_ypower.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_-ypower" class = "sticker right" src = "./assets/images/st_-ypower.png" data-toggle="tooltip" title="Sticker"></image>
+        </li>
+        <li>
+            <image id = "st_xy" class = "sticker left" src = "./assets/images/st_xy.png" data-toggle="tooltip" title="Sticker"></image>
+            <image id = "st_-xy" class = "sticker right" src = "./assets/images/st_-xy.png" data-toggle="tooltip" title="Sticker"></image>
+        </li>
+
+        </ul>
+    </div>
+    <div id="pencilToolBox">
+        <div id="mydivheader">ToolBox</div>
+        <div id = "eraser" class = "tool" data-tool = "eraser" data-toggle="tooltip" title="Eraser"></div><br/>
+        <div id = "pencilEraser" data-tool = "pencilEraser" data-toggle="tooltip" title="Erase all drawings"></div><br/>
+        <div id = "undo" data-tool = "undo" data-toggle="tooltip" title="Undo"></div><br/>
+        <div id = "redo" data-tool = "redo" data-toggle="tooltip" title="Redo"></div><br/>
+        <div id = "hideToolbar" data-tool = "cross" data-toggle="tooltip" title="Close the toolbox"></div>
+    </div>
+    <canvas id="myCanvas" style="position:absolute; left:0px; top:0px;"></canvas>
+        <div style="position:absolute;left:100px;top:100px;width:60px;" id = "fract">
+        </div>
+    <!-- <div class="frac">
+            <span>1</span>
+            <span class="symbol">/</span>
+            <span class="bottom">2</span>
+            
+    </div>  -->
+    <menu id = "bottom-toolbar">
+      <div class="container-fluid desktop">
+        <div class="row">
+          <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: center;">
+            <div data-toggle="tooltip" title="Restart" id= "restart">
+          </div>
+          </div>
+          <div class="col-sm-5 col-md-5 col-lg-5" id = "toolSec" style="text-align: center;">
+            <div class="row" id = "tools">
+                <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                    <image class = "divider" src = "./assets/images/divider.png"  width="1" height="100"></image>
+                </div>
+                <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                    <div id = "cutBar" class = "toolImg tool" data-tool = "saw" data-toggle="tooltip" title="Cut the bar"></div>
+                </div>
+                <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left; margin-left: -5px;">
+                        <div id = "scissors" class = "toolImg tool" data-tool = "scissors" data-toggle="tooltip" title="Detach the bar"></div>
+                </div>
+                <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                    <div id = "detach" class = "toolImg tool" data-tool = "detach" data-toggle="tooltip" title="Detach every part"></div>
+                </div>
+                <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                    <div id = "dustbin" class = "toolImg" data-tool = "dustbin" data-toggle="tooltip" title="Dustbin"></div>
+                </div>
+                <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: center;">
+                    <div id = "paint" class = "toolImg tool" data-tool = "paint" data-toggle="tooltip" title="Paint the bar"></div>
+                </div>
+                <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: center;">
+                    <div id = "copy" class = "toolImg" data-tool = "copy" data-toggle="tooltip" title="Copy the bar"></div>
+                </div>
+                <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: center;">
+                    <div id = "abc" class = "toolImg" data-tool = "abc" data-toggle="tooltip" title="Type questions"></div>
+                </div>
+                <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                    <div id = "pencil" class = "toolImg tool" data-tool = "pencil" data-toggle="tooltip" title="Pencil"></div>
+                </div>
+                <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;margin-left: -35px;">
+                    <image class = "divider" src = "./assets/images/divider.png"  width="1" height="100"></image>
+                </div>
+                <div class="col-sm-2 col-md-2 col-lg-2" style="text-align: left;">
+                    <div id = "addBar" data-tool = "bar" data-toggle="tooltip" title="Bar"></div>
+                </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-6 col-lg-6" style="text-align: left;">
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                    <div id = "horizontalarrow" data-toggle="tooltip" title="Horizontal arrow"></div>
+                </div>
+                <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                    <div id = "upperdownarrow" data-toggle="tooltip" title="Vertical arrow"></div>
+                </div>
+                <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                    <div id = "dottedupperdownarrow" data-toggle="tooltip" title="Dotted Vertical arrow"></div>
+                </div>
+                <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                    <div id = "dottedSquare" data-toggle="tooltip" title="Select Area"></div>  
+                </div>
+                <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                        <image class = "divider" class = "toolImg" src = "./assets/images/divider.png"  width="1" height="100"></image>
+                </div>
+                <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;margin-left: -4%;">
+                        <button id = "colorPicker" class="jscolor {valueElement:'valueInput', styleElement:'styleInput'}" title="Colorpicker"></button>
+                        <input id="valueInput" value="ff699" style="visibility: hidden;">
+                </div>
+                <div class="col-sm-3 col-md-3 col-lg-3" id = "clrGroup" style="text-align: left;">
+                    <image id = "redPencil" class = "clr" data-clr = "#F8c5D0" src = "./assets/images/redPencil.png" data-toggle="tooltip" title="Color pencil"></image>
+                    <image id = "bluePencil" class = "clr" data-clr = "#F6E7A3" src = "./assets/images/bluePencil.png" data-toggle="tooltip" title="Color pencil"></image>
+                    <image id = "greenPencil" class = "clr" data-clr = "#ABE3E5" src = "./assets/images/greenPencil.png" data-toggle="tooltip" title="Color pencil"></image>
+                    <image id = "orangePencil" class = "clr" data-clr = "black" src = "./assets/images/orangePencil.png" data-toggle="tooltip" title="Color pencil"></image>
+                    <image class = "divider" class = "toolImg" src = "./assets/images/divider.png"  width="1" height="100" style="margin-left: 20px;"></image>
+                </div>
+
+                <div class="col-sm-2 col-md-2 col-lg-2" style="text-align: center;">
+                    <div id = "download" data-toggle="tooltip" title="Download"></div>
+                </div>
+                <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: center;">
+                    <div id = "upload" class = "toolImg" onclick="document.getElementById('uploadImage').click()" data-toggle="tooltip" title="Upload">
+                    <input type="file" id="uploadImage" accept="image/png, image/jpeg" style="visibility: hidden;"></div>
+                </div>
+    
+            </div>
+            
+          </div>
+          <!-- <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+            <image class = "divider" class = "toolImg" src = "./assets/images/divider.png"  width="1" height="100"></image>
+          </div> -->
+        </div>
+      </div>
+
+      <div class="container-fluid mobile">
+        <div class="row">
+            <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: center;">
+              <div data-toggle="tooltip" title="Restart" id= "restart">
+            </div>
+            </div>
+            <div class="col-sm-5 col-md-5 col-lg-5" id = "toolSec" style="text-align: center;">
+              <div class="row" id = "tools">
+                  <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                      <image class = "divider" src = "./assets/images/divider.png"  width="1" height="100"></image>
+                  </div>
+                  <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                      <div id = "cutBar" class = "toolImg tool" data-tool = "saw" data-toggle="tooltip" title="Cut the bar"></div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left; margin-left: -5px;">
+                          <div id = "scissors" class = "toolImg tool" data-tool = "scissors" data-toggle="tooltip" title="Detach the bar"></div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                      <div id = "detach" class = "toolImg tool" data-tool = "detach" data-toggle="tooltip" title="Detach every part"></div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                      <div id = "dustbin" class = "toolImg" data-tool = "dustbin" data-toggle="tooltip" title="Dustbin"></div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: center;">
+                      <div id = "paint" class = "toolImg tool" data-tool = "paint" data-toggle="tooltip" title="Paint the bar"></div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: center;">
+                      <div id = "copy" class = "toolImg" data-tool = "copy" data-toggle="tooltip" title="Copy the bar"></div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: center;">
+                      <div id = "abc" class = "toolImg" data-tool = "abc" data-toggle="tooltip" title="Type questions"></div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                      <div id = "pencil" class = "toolImg tool" data-tool = "pencil" data-toggle="tooltip" title="Pencil"></div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;margin-left: -35px;">
+                      <image class = "divider" src = "./assets/images/divider.png"  width="1" height="100"></image>
+                  </div>
+                  <div class="col-sm-2 col-md-2 col-lg-2" style="text-align: left;">
+                      <div id = "addBar" data-tool = "bar" data-toggle="tooltip" title="Bar"></div>
+                  </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-6" style="text-align: left;">
+              <div class="row">
+                  <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                      <div id = "horizontalarrow" data-toggle="tooltip" title="Horizontal arrow"></div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                      <div id = "upperdownarrow" data-toggle="tooltip" title="Vertical arrow"></div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                      <div id = "dottedupperdownarrow" data-toggle="tooltip" title="Dotted Vertical arrow"></div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                      <div id = "dottedSquare" data-toggle="tooltip" title="Select Area"></div>  
+                  </div>
+                  <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+                          <image class = "divider" class = "toolImg" src = "./assets/images/divider.png"  width="1" height="100"></image>
+                  </div>
+                  <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;margin-left: -4%;">
+                          <button id = "colorPicker" class="jscolor {valueElement:'valueInput', styleElement:'styleInput'}" title="Colorpicker"></button>
+                          <input id="valueInput" value="ff699" style="visibility: hidden;">
+                  </div>
+                  <div class="col-sm-3 col-md-3 col-lg-3" id = "clrGroup" style="text-align: left;">
+                      <image id = "redPencil" class = "clr" data-clr = "#F8c5D0" src = "./assets/images/redPencil.png" data-toggle="tooltip" title="Color pencil"></image>
+                      <image id = "bluePencil" class = "clr" data-clr = "#F6E7A3" src = "./assets/images/bluePencil.png" data-toggle="tooltip" title="Color pencil"></image>
+                      <image id = "greenPencil" class = "clr" data-clr = "#ABE3E5" src = "./assets/images/greenPencil.png" data-toggle="tooltip" title="Color pencil"></image>
+                      <image id = "orangePencil" class = "clr" data-clr = "black" src = "./assets/images/orangePencil.png" data-toggle="tooltip" title="Color pencil"></image>
+                      <image class = "divider" class = "toolImg" src = "./assets/images/divider.png"  width="1" height="100" style="margin-left: 20px;"></image>
+                  </div>
+  
+                  <div class="col-sm-2 col-md-2 col-lg-2" style="text-align: center;">
+                      <div id = "download" data-toggle="tooltip" title="Download"></div>
+                  </div>
+                  <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: center;">
+                      <div id = "upload" class = "toolImg" onclick="document.getElementById('uploadImage').click()" data-toggle="tooltip" title="Upload">
+                      <input type="file" id="uploadImage" accept="image/png, image/jpeg" style="visibility: hidden;"></div>
+                  </div>
+      
+              </div>
+              
+            </div>
+            <!-- <div class="col-sm-1 col-md-1 col-lg-1" style="text-align: left;">
+              <image class = "divider" class = "toolImg" src = "./assets/images/divider.png"  width="1" height="100"></image>
+            </div> -->
+          </div>
+      </div>
+    </menu>
+    <div class="hover_bkgr_fricc">
+        <span class="helper"></span>
+        <div>
+            <div class="popupCloseButton">X</div>
+            <textarea id = "text"></textarea>
+            <select id="font-style" name="font">
+                <option>Georgia</option>
+                <option>Palatino Linotype</option>
+                <option>Book Antiqua</option>
+                <option>Times New Roman</option>
+                <option>Arial</option>
+                <option>Helvetica</option>
+                <option>Arial Black</option>
+                <option>Impact</option>
+                <option>Tahoma</option>
+                <option>Verdana</option>
+                <option>Courier New</option>
+                <option>Lucida Console</option>
+            </select>
+            <select id="font-size" name="font-size">
+              <option value="30">Small</option>
+              <option value="50" selected>Medium</option>
+              <option value="70">Large</option>
+            </select>
+            <button id = "confirmBtn">Confirm</button>
+        </div>
+    </div>
+    <div class="bkgr_fricc">
+        <span class="helper"></span>
+        <div>
+            <div class="CloseButton">X</div>
+            <h2>Start Over?</h2>
+            <br>
+            <h6>Do you want to restart your work?</h6>
+            <button id = "yesBtn">YES</button>
+        </div>
+    </div>
+    <div class="bkgr_fricc_copy">
+        <span class="helper"></span>
+        <div>
+            <div class="CloseButtonCopy">X</div>
+            <h3>Which part to copy?</h6><br/>
+            <!-- <div style="float:left;"> -->
+                <input type="radio" id = "wholeBar" name="copy" value="whole" style = "margin-left: -90px;" checked="checked"> Copy whole bar  <br>
+            <!-- </div>
+            <div style="float:right;"> -->
+                <input type="radio" id = "partBar" name="copy" value="part"> Copy selected part
+                <input type="number" id = "numberOfParts" style="width:60px;margin-left: 10px;" value="1"><br>
+            <!-- </div> -->
+            <button id = "confirmCopy">Confirm</button>
+        </div>
+    </div>
+</body>
+<script src="./assets/js/jquery.min.js"></script>
+<script src="./assets/js/jquery.js"></script>
+<script src="./assets/js/popper.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<script src="./assets/js/jscolor.js"></script>
+<script src="./assets/js/html2canvas.js"></script>
+<script src="./assets/js/myscript.js"></script>
+
+</html>

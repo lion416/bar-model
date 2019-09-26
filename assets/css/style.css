@@ -1,0 +1,993 @@
+
+html, body {
+  width:  100%;
+  height: 100%;
+  margin: 0;
+}
+.btn-primary{
+    background-color: white !important;
+    border-color: white !important;
+}
+.btn-primary:hover{
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+}
+#sidebar-wrapper {
+    padding: 0px,15px,0px,15px;
+    margin-right: -250px;
+    right: 0;
+    width: 250px;
+    background: #A9A9A9;
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: all 0.5s ease-in 0s;
+    -webkit-transition: all 0.5s ease-in 0s;
+    -moz-transition: all 0.5s ease-in 0s;
+    -ms-transition: all 0.5s ease-in 0s;
+    -o-transition: all 0.5s ease-in 0s;
+  }
+
+  .sidebar-nav {
+    position: absolute;
+    top: 50px;
+    width: 250px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sidebar-nav li {
+    line-height: 50px;
+    text-indent: 50px;
+  }
+
+  /* .sidebar-nav li img{
+    margin-left: 15px;
+  } */
+
+  #menu-toggle {
+    top: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1;
+    cursor: pointer;
+  }
+
+  #sidebar-wrapper.active {
+    right: 250px;
+    width: 250px;
+    cursor: pointer;
+    transition: all 0.5s ease-out 0s;
+    -webkit-transition: all 0.5s ease-out 0s;
+    -moz-transition: all 0.5s ease-out 0s;
+    -ms-transition: all 0.5s ease-out 0s;
+    -o-transition: all 0.5s ease-out 0s;
+  }
+
+  .toggle {
+    margin: 5px 5px 0 0;
+  }
+
+
+  /* bottom tool-bar */
+  #bottom-toolbar{
+    position: fixed;
+    bottom: -21px;
+    width: 100%;
+    height: 80px;
+    /* background-color: #53BE88; */
+    background-color: #A9A9A9;
+    /* background-color: #77DAFA; */
+    /* background-image: linear-gradient(to top,#6600ff,#0099ff); */
+    padding-top: 13px;
+   /* padding-left: 100px; */
+  }
+  #bottom-toolbar:hover{
+    cursor: pointer;
+  }
+  .toolImg{
+    margin-left: -30px;
+    margin-top: 5px;
+  }
+  .divider{
+    margin-top: -13px;
+  }
+  #restart{
+    width:50px;
+    height: 50px;
+    border-radius: 50%;
+    background-image: url(../images/restart.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+    margin-left: 25px;
+  }
+  #restart:hover{
+    content: url(../images/restart_hover.png);
+    opacity: 0.5;
+  }
+  #addBar{
+    width: 150px;
+    height: 45px;
+    background-image: url(../images/bar1.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+    margin-top:4px;
+    margin-left: -20px;
+  }
+  #addBar:hover{
+    content: url(../images/bar_hover1.png);
+    opacity: 0.7;
+  }
+  #cutBar{
+    height: 42px;
+    width: 40px;
+    background-image: url(../images/saw.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+  }
+  #cutBar:hover{
+    content: url(../images/saw_hover.png);
+    opacity: 0.7;
+  }
+  #scissors{
+    height: 42px;
+    width: 40px;
+    background-image: url(../images/scissors.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+  }
+  #scissors:hover{
+    content: url(../images/scissors_hover.png);
+    opacity: 0.7;
+  }
+  #detach{
+    height: 42px;
+    width: 40px;
+    background-image: url(../images/cutWholebar.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+  }
+  #detach:hover{
+    content: url(../images/cutWholebar_hover.png);
+    opacity: 0.7;
+  }
+  #pencil{
+    height: 45px;
+    width: 14px;
+    background-image: url(../images/pencil.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+  }
+  #pencil:hover{
+    content: url(../images/pencil_hover.png);
+    opacity: 0.7;
+  }
+  #dustbin{
+    height: 45px;
+    width: 37px;
+    background-image: url(../images/dustbin.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+  }
+  #dustbin:hover{
+    content: url(../images/dustbin_hover.png);
+    opacity: 0.7;
+  }
+  #eraser{
+    height: 45px;
+    width: 45px;
+    background-image: url(../images/eraser.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+    margin-left: 14px;
+  }
+  #eraser:hover{
+    content: url(../images/eraser_hover.png);
+  }
+  #paint{
+    height: 45px;
+    width: 41px;
+    background-image: url(../images/paint.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+  }
+  #paint:hover{
+    content: url(../images/paint_hover.png);
+    opacity: 0.7;
+  }
+  #pencilEraser{
+    height: 45px;
+    width: 45px;
+    background-image: url(../images/pencilEraser.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+    margin-left: 14px;
+  }
+  #pencilEraser:hover{
+    content: url(../images/pencilEraser_hover.png);
+  }
+  #copy{
+    height: 45px;
+    width: 41px;
+    background-image: url(../images/copy.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+  }
+  #copy:hover{
+    content: url(../images/copy_hover.png);
+    opacity: 0.7;
+  }
+  #abc{
+    height: 45px;
+    width: 41px;
+    background-image: url(../images/abc.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+  }
+  #abc:hover{
+    content: url(../images/abc_hover.png);
+    opacity: 0.7;
+  }
+
+  #colorPicker:hover{
+    opacity: 0.5;
+  }
+  #undo{
+    height: 45px;
+    width: 45px;
+    background-image: url(../images/undo.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+    margin-left: 16px;
+  }
+  #undo:hover{
+    content: url(../images/undo_hover.png);
+  }
+  #redo{
+    height: 45px;
+    width: 45px;
+    background-image: url(../images/redo.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+    margin-left: 16px;
+  }
+  #redo:hover{
+    content: url(../images/redo_hover.png);
+  }
+  #hideToolbar{
+    height: 35px;
+    width: 35px;
+    background-image: url(../images/cross.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+    margin-left: 20px;
+  }
+  #hideToolbar:hover{
+    /* content: url(../images/cross_hover.png); */
+    opacity: 0.7;
+  }
+/*  #save:hover{
+    content: url(../images/save_hover.png);
+  }*/
+  #red:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  #yellow:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  #blue:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  #green:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  #black:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  #orange:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  #colorpicker{
+    width: 100px;
+    height: 30px; 
+  }
+  #linesize{
+    width: 100px;
+    height: 30px;
+    background-color: #AB2567;
+    color:white;
+    margin-left: 8px;
+  }
+  #smallline{
+    width: 55%;
+  }
+  #smallline:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  #mediumline{
+    width: 55%;
+  }
+  #mediumline:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  #bigline{
+    width: 55%;
+  }
+  #bigline:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+ #horizontalarrow{
+    height: 26px;
+    width: 60px;
+    background-image: url(../images/horizontalarrow.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+    margin-top: 15px;
+    margin-left: -6px;
+  }
+  #horizontalarrow:hover{
+    content: url(../images/horizontalarrow_hover.png);
+    opacity: 0.7;
+  }
+ #upperdownarrow{
+    height: 46px;
+    width: 28px;
+    background-image: url(../images/upperdownarrow.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+    margin-top: 3px;
+    margin-left: 15px;
+  }
+  #upperdownarrow:hover{
+    content: url(../images/upperdownarrow_hover.png);
+    opacity: 0.7;
+  }
+  #dottedupperdownarrow{
+    height: 46px;
+    width: 28px;
+    background-image: url(../images/dottedupperdownarrow.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+    margin-top: 3px;
+    margin-left: 15px;
+  }
+  #dottedupperdownarrow:hover{
+    content: url(../images/dottedupperdownarrow_hover.png);
+    opacity: 0.7;
+  }
+  #dottedSquare{
+    height: 48px;
+    width: 48px;
+    background-image: url(../images/select1.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+    margin-top: 1px;
+  }
+  #dottedSquare:hover{
+    content: url(../images/select_hover1.png);
+    opacity: 0.7;
+  }
+  #redPencil{
+    height: 55px;
+    width: 17px;
+    background-image: url(../images/redPencil.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+  }
+  #redPencil:hover{
+    opacity: 0.7;
+  }
+  #bluePencil{
+    height: 55px;
+    width: 17px;
+    background-image: url(../images/bluePencil.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+  }
+  #bluePencil:hover{
+    opacity: 0.7;
+  }
+  #greenPencil{
+    height: 55px;
+    width: 17px;
+    background-image: url(../images/greenPencil.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+  }
+  #greenPencil:hover{
+    opacity: 0.7;
+  }
+  #orangePencil{
+    height: 55px;
+    width: 17px;
+    background-image: url(../images/orangePencil.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+  }
+  #orangePencil:hover{
+    opacity: 0.7;
+  }
+  #purplePencil{
+    height: 55px;
+    width: 17px;
+    background-image: url(../images/purplePencil.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+  }
+  #purplePencil:hover{
+    opacity: 0.7;
+  }
+  .clr{
+    margin-right:10px;
+  }
+  #download{
+    height: 48px;
+    width: 42px;
+    background-image: url(../images/download.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+    margin-top: 2px;
+  }
+  #download:hover{
+    content: url(../images/download_hover.png);
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  #upload{
+    height: 53px;
+    width: 42px;
+    background-image: url(../images/upload.png);
+    background-size: 100% 100%;
+    background-position: center;
+    border: none;
+    outline: none;
+    margin-top: 1px;
+  }
+  #upload:hover{
+    content: url(../images/upload_hover.png);
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  #myCanvas{
+    background-image:url('');
+    background-repeat: no-repeat;
+    /* position: absolute;
+    z-index: -1; */
+  }
+  #questionmark{
+    width: 20%;
+    height: 55px;
+  }
+  #questionmark:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  #fraction{
+    width: 20%;
+    height: 55px;
+    /* margin-left: 18px; */
+  }
+  #fraction:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+
+ #yellowCar{
+    width: 25%;
+    height: 40px;
+  }
+  #yellowCar:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  } 
+
+   #blueCar{
+    width: 25%;
+    height: 40px;
+    margin-left:23px;
+  }
+  #blueCar:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  /* #question{
+    width: 20%;
+    height: 55px;
+    margin-left: 40px;
+  }
+  #question:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  #redquestion{
+    width: 20%;
+    height: 55px;
+  }
+  #redquestion:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  #logoclrquestion{
+    width: 20%;
+    height: 55px;
+    margin-left: 40px;
+  }
+  #logoclrquestion:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  } */ 
+  /* #sweets{
+    width: 25%;
+    height: 40px;
+  } */
+  /* #sweets:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  #cherrycake{
+    width: 18%;
+    height: 45px;
+    margin-left: 20px;
+  }
+  #cherrycake:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  #cherrycake1{
+    width: 20%;
+    height: 50px;
+    margin-left: 30px;
+  }
+  #cherrycake1:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  #cupcake{
+    width: 18%;
+    height: 45px;
+    margin-left: 43px;
+  }
+  #cupcake:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  } */
+  .sticker{
+    width: 17%;
+    height: 45px;
+  }
+  #sticker:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+  /* #st_one{
+    width: 10%;
+    margin-left: 10px;
+  } */
+  /* #st_x{
+    width: 12%;
+    margin-left: 8px;
+  } */
+  /* #st_y{
+    width: 12%;
+    margin-left: 8px;
+  } */
+  /* .left{
+
+  } */
+  .right{
+    margin-left: 50px;
+  }
+  #sidebar-wrapper li{
+    margin-top:10px;
+  }
+  #equal:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+
+  #plus:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+
+  #minus:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+
+  #multiply:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+
+  #divider:hover{
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+  }
+
+
+  /* Popup box BEGIN */
+.hover_bkgr_fricc{
+    background:rgba(0,0,0,.4);
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+}
+.hover_bkgr_fricc .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+.hover_bkgr_fricc > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 600px;
+    min-height: 200px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #53BE88;
+    padding: 15px 5%;
+}
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+.trigger_popup_fricc {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 20px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 16px;
+  resize: none;
+}
+
+select {
+  width: 45%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f1f1f1;
+}
+#font-style {
+  float: left;
+}
+#font-size {
+  float: right;
+}
+
+#confirmBtn {
+  margin-top: 20px;
+  background-color: white; 
+  color: black; 
+  width: 100px;
+  height: 40px;
+  border: 3px solid #53BE88;
+}
+#confirmBtn:hover{
+  background-color: #53BE88;
+  color: white;
+}
+/* Popup box BEGIN */
+/*restart pop up*/
+.bkgr_fricc{
+    background:rgba(0,0,0,.4);
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+}
+.bkgr_fricc .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+.bkgr_fricc > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 600px;
+    min-height: 200px;
+    vertical-align: middle;
+    width: 60%;
+    position: relative;
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 10px;
+    border-color: #53BE88;
+    padding: 15px 5%;
+}
+.CloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.CloseButton:hover {
+    background-color: #ccc;
+}
+#yesBtn {
+  margin-top: 20px;
+  background-color: white; 
+  color: black; 
+  width: 100px;
+  height: 40px;
+  border: 3px solid #53BE88;
+}
+#yesBtn:hover{
+  background-color: #53BE88;
+  color: white;
+}
+
+/* this is for copying pop up */
+.bkgr_fricc_copy{
+  background:rgba(0,0,0,.4);
+  cursor:pointer;
+  display:none;
+  height:100%;
+  position:fixed;
+  text-align:center;
+  top:0;
+  width:100%;
+  z-index:10000;
+}
+.bkgr_fricc_copy .helper{
+  display:inline-block;
+  height:100%;
+  vertical-align:middle;
+}
+.bkgr_fricc_copy > div {
+  background-color: #fff;
+  box-shadow: 10px 10px 60px #555;
+  display: inline-block;
+  height: auto;
+  max-width: 600px;
+  min-height: 200px;
+  vertical-align: middle;
+  width: 60%;
+  position: relative;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: #53BE88;
+  padding: 15px 5%;
+}
+.CloseButtonCopy {
+  background-color: #fff;
+  border: 3px solid #999;
+  border-radius: 50px;
+  cursor: pointer;
+  display: inline-block;
+  font-family: arial;
+  font-weight: bold;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  font-size: 25px;
+  line-height: 30px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+}
+.CloseButtonCopy:hover {
+  background-color: #ccc;
+}
+#confirmCopy {
+margin-top: 20px;
+background-color: white; 
+color: black; 
+width: 100px;
+height: 40px;
+border: 3px solid #53BE88;
+}
+#confirmCopy:hover{
+background-color: #53BE88;
+color: white;
+}
+
+#colorPicker{
+  width: 50px;
+  height: 50px;
+  border-radius: 50px;
+  background-image: url('../images/color_picker.png'); /* Should work */
+  background-position: center;
+  cursor:pointer;
+  border: none;
+}
+button:focus {
+  outline: transparent !important;
+}
+
+/* //draggable tools for pencil */
+
+#pencilToolBox {
+  position: absolute;
+  z-index: 99;
+  background-color: #f1f1f1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+  border-radius: 30px;
+  background-color: #8cf29e;
+  border-color: #53BE88;
+  display: none;
+  /* right: 0px; */
+  top:50px;
+}
+
+#mydivheader {
+  padding: 10px;
+  cursor: move;
+  z-index: 10;
+  color: #fff;
+}
+
+.frac {
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  letter-spacing: 0.001em;
+  text-align: center;
+}
+.frac > span {
+  display: block;
+  padding: 0.1em;
+}
+.frac span.bottom {
+  border-top: thin solid black;
+}
+.frac span.symbol {
+  display: none;
+} 
+
+
+.container-fluid.mobile {
+  display: none;
+}
+@media (min-width : 300px) and (max-width : 768px)
+{
+  .container-fluid.desktop {display: none;}	
+  .container-fluid.mobile {display: block;}	
+  #bottom-toolbar {bottom: -21px;height: auto;padding-top: 10px;padding-left: 0;}	
+  #bottom-toolbar .container-fluid > .row > div {display: inline-block;padding: 0 10px;width: auto;height: auto;}	
+  #bottom-toolbar .container-fluid > .row .col-sm-1 {    display: inline-block;width: 30px;height: 30px;margin: 0px auto 5px;padding: 0;    vertical-align: top;}
+  #bottom-toolbar .container-fluid > .row .col-sm-1 div {display: inline-block;width: 30px;height: 30px;background-size: auto 100% !important;margin: 0;background-repeat: no-repeat !important;}
+  #bottom-toolbar .container-fluid > .row > div#toolSec {width: 100%;}
+  .col-sm-5.col-md-5.col-lg-5.tool-2 .row > div {width: auto;height: 40px;}
+  #colorPicker {width: 30px;height: 30px;}
+  #clrGroup img {height: auto;width: 8px;margin: 0 4px !important;}
+  img.divider {display: none;}
+  #addBar {height: 30px;}
+  #bottom-toolbar .container-fluid > .row .col-sm-1 div#horizontalarrow {
+    background-size: 100% !important;
+    width: 50px;
+    margin-left: -32px;
+    margin-top: 3px;
+}
+
+.col-sm-5.col-md-5.col-lg-5.tool-2 {margin: 0 auto;padding: 0 25px !important;}
+
+
+}
+
+
+  
+
+
+
+
+
